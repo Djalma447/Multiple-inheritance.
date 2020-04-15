@@ -1,4 +1,5 @@
 ﻿using System;
+using Course.Devices;
 
 namespace Course
 {
@@ -6,7 +7,13 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Printer p = new Printer() { SerialNumber = 2457 };
+            p.ProcessDoc("DjPrinter");
+            p.Print("Printer Djr");
+
+            Scanner s = new Scanner() { SerialNumber = 5781 };
+            s.ProcessDoc("DjScanner");
+            Console.WriteLine(s.Scan());
         }
     }
 }
