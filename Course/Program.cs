@@ -14,6 +14,11 @@ namespace Course
             Scanner s = new Scanner() { SerialNumber = 5781 };
             s.ProcessDoc("DjScanner");
             Console.WriteLine(s.Scan());
+
+            ComboDevice cd = new ComboDevice() { SerialNumber = 8641 };
+            cd.ProcessDoc("My work DJR");
+            cd.Print("My work DJR");
+            Console.WriteLine(cd.Scan());
         }
     }
 }
